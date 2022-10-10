@@ -43,7 +43,8 @@ class BagMain {
         int number_of_crosses = 0;
         for (Bag i : bags){
             if (i instanceof CrossbodyBag){
-                number_of_crosses = number_of_crosses + i.getNumberOfStraps();
+                CrossbodyBag j = (CrossbodyBag) i;
+                number_of_crosses = number_of_crosses + j.getNumberOfStraps();
             }
         }
         return number_of_crosses;

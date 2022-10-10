@@ -77,7 +77,7 @@ public abstract class Bag {
      *       color of this bag to the given color.
      */
 
-    public void getColor(String color){
+    public void setColor(String color){
         this.color = color;
     }
 

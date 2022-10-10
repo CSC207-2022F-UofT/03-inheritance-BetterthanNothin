@@ -34,20 +34,14 @@
 public class CrossbodyBag extends Bag{
 
     private int numberOfStraps;
-    /**
-     * Creates a new HandBag with the given color and
-     * capacity.
-     *
-     * @param color
-     * @param capacity
-     */
+
     public CrossbodyBag(String color, int capacity, int straps) {
         /**
          * This is how we call the parent's constructor
          * The Python equivalent is super().__init__(...)
          */
         super(color, capacity);
-        int this.numberOfStraps = straps;
+        this.numberOfStraps = straps;
     }
 
     public int getNumberOfStraps(){
@@ -66,5 +60,11 @@ public class CrossbodyBag extends Bag{
          * To call a method defined in a parent, you use super.method_name(...)
          */
         super.increaseCapacity(2);
+    }
+
+    @Override
+    public String toString() {
+        return this.getColor() + " Crossbody Bag with " + this.numberOfStraps + " straps (" + this.getNumberOfContents() + " / " +
+                this.getCapacity() + ")";
     }
 }
